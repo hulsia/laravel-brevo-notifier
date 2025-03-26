@@ -25,6 +25,12 @@
             "email": "david@yieldstudio.fr",
             "homepage": "https://yieldstudio.fr",
             "role": "Developer"
+        },
+        {
+            "name": "Arthur Monney",
+            "email": "arthur.monney@yieldstudio.fr",
+            "homepage": "https://yieldstudio.fr",
+            "role": "Developer"
         }
     ],
     "require": {
@@ -34,10 +40,10 @@
     },
     "require-dev": {
         "ciareis/bypass": "^1.0",
-        "friendsofphp/php-cs-fixer": "^3.8",
-        "orchestra/testbench": "^7.22|^8.1",
-        "pestphp/pest": "^1.21",
-        "phpunit/phpunit": "^9.1"
+        "laravel/pint": "^1.16",
+        "orchestra/testbench": "^7.22|^8.1|^9.0|^10",
+        "pestphp/pest": "^2.34|^3.0",
+        "phpunit/phpunit": "^9.5|^10.5"
     },
     "autoload": {
         "psr-4": {
@@ -50,7 +56,7 @@
         }
     },
     "scripts": {
-        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes",
+        "format": "vendor/bin/pint",
         "test": "vendor/bin/pest",
         "post-autoload-dump": [
             "@php ./vendor/bin/testbench package:discover --ansi"
